@@ -14,6 +14,9 @@ city = ""
 geolocation = ""
 country = ""
 hostname = ""
+route = ""
+phone = ""
+timezone = ""
 
 time.sleep(2)
 
@@ -22,7 +25,19 @@ details = handler.getDetails(address)
 city = details.city
 geolocation = details.loc
 country = details.country_name
-hostname = details.hostname
+try:
+    route = details.route
+except: pass
+try:
+    phone = details.phone
+except: pass
+try:
+    timezone = details.timezone
+except: pass
+try:
+    hostname = details.hostname
+except: pass
+
 
 time.sleep(2)
 os.system("cls")
@@ -32,5 +47,8 @@ print("City : " +city) #City
 print("Geolocation : " +geolocation) #Geolocation
 print("Country : " +country) #Country
 print("Hostname : " +hostname) #Hostname
+print("Route : " +route) #Route
+print("Phone : " +phone) #Phone
+print("Timezone : " +timezone) #Timezone
 print("")
 os.system("pause")
