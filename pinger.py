@@ -52,3 +52,4 @@ print("Phone : " +phone) #Phone
 print("Timezone : " +timezone) #Timezone
 print("")
 os.system("pause")
+os.system("python3 pinger.py")
